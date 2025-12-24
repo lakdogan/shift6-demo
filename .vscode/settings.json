@@ -1,14 +1,21 @@
 {
   "editor.formatOnSave": false,
-  "editor.wordWrap": "off",
-  "editor.minimap.enabled": false,
   "editor.fontSize": 14,
   "editor.fontLigatures": false,
+  "editor.wordWrap": "off",
+  "editor.minimap.enabled": false,
   "editor.scrollBeyondLastLine": false,
+
   "[rpgle]": {
     "editor.defaultFormatter": "lakdogan.shift6foribmi"
   },
-  "workbench.activityBar.location": "default",
-  "editor.renderWhitespace": "none",
-  "editor.renderControlCharacters": false
+
+  "shift6.spaces": 6,
+  "shift6.blockIndent": 2,
+  "shift6.collapseTokenSpaces": true,
+  "shift6.trimStringParentheses": true,
+  "shift6.alignPlusContinuation": true,
+  "shift6.continuationColumn": 66,
+  "shift6.joinAsteriskTokensInDecl": true,
+  "shift6.wrapLongStrings": false
 }

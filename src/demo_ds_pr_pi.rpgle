@@ -12,22 +12,39 @@
 
 ctl-opt dftactgrp(*no) actgrp(*caller);
 
-dcl-proc Main;
-dcl-ds Customer   qualified  inz;
-custIdint(10);
-firstNamevarchar(30);
+dcl-ds Customer qualified;
+id int(10);
+firstName varchar(30);
 lastName varchar(30);
-streetvarchar(60);
-zipchar(10);
-cityvarchar(40);
 isActive ind;
 end-ds;
 
-Customer.custId=1;
+dcl-pr GetCustomerName varchar(100);
+p_id int(10);
+end-pr;
+
+dcl-proc GetCustomerName;
+dcl-pi *n varchar(100);
+p_id int(10);
+end-pi;
+
+dcl-s full varchar(100);
+
+if(p_id=Customer.id and Customer.isActive=*on);
+full = %trim(Customer.firstName) + ' ' + %trim(Customer.lastName);
+return full;
+endif;
+
+return 'unknown';
+end-proc;
+
+dcl-proc Main;
+
+Customer.id=42;
 Customer.firstName='Levent';
 Customer.lastName='Akdogan';
-Customer.street='Main Street 12';
-Customer.zip='12345';
-Customer.city='Heilbronn';
 Customer.isActive=*on;
+
+dsply(GetCustomerName( 42 ));
+
 end-proc;

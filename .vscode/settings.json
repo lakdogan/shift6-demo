@@ -15,7 +15,7 @@
   "shift6.collapseTokenSpaces": true,
   "shift6.trimStringParentheses": true,
   "shift6.alignPlusContinuation": true,
-  "shift6.continuationColumn": 66,
+  "shift6.continuationColumn": 44,
   "shift6.joinAsteriskTokensInDecl": true,
-  "shift6.wrapLongStrings": false
+  "shift6.wrapLongStrings": true
 }

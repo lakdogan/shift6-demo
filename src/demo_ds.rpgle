@@ -1,6 +1,7 @@
 **free
 ctl-opt dftactgrp(*no) actgrp(*caller);
 
+dcl-proc Main;
 dcl-ds Customer   qualified  inz;
 custIdint(10);
 firstNamevarchar(30);
@@ -18,3 +19,4 @@ Customer.street='Main Street 12';
 Customer.zip='12345';
 Customer.city='Heilbronn';
 Customer.isActive=*on;
+end-proc;

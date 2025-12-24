@@ -12,7 +12,8 @@ p_idint(10);
 p_amount   packed(7:2);
 end-pr;
 
-dcl-pi CalculateTotal;
+dcl-proc CalculateTotal;
+dcl-pi *n packed(9:2);
 p_idint(10);
 p_amountpacked(7:2);
 end-pi;
@@ -25,3 +26,4 @@ result =result -100;
 endif;
 
 return   result;
+end-proc;

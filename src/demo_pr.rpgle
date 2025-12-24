@@ -10,16 +10,21 @@ userIdint(10);
 statusind;
 end-pr;
 
-dcl-pi SetUserStatus;
+dcl-proc SetUserStatus;
+dcl-pi *n ind;
 userIdint(10);
 statusind;
 end-pi;
 
+if(status=*on);
+dsply('status updated for '+%char(userId));
+return *on;
+else;
+dsply('failed for '+%char(userId));
+return *off;
+endif;
+
+end-proc;
+
 dcl-s ok ind;
 ok=SetUserStatus(  42:*on);
-
-if(ok=*on);
-dsply('status updated');
-else;
-dsply('failed');
-endif;
